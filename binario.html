@@ -1,0 +1,65 @@
+<!-- binario.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Descifra el código</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #0f0;
+      font-family: monospace;
+      padding: 20px;
+      position: relative;
+    }
+
+    .codigo {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .clave-box {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    input, button {
+      padding: 5px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #0ff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Descifra este código binario:</h2>
+  <div class="codigo">
+    01100001 01101100 01100111 01101111 00100000 01100011 01101111 01101101 01101001 01100101 01101110 01111010 01100001
+    <br><br>
+    (Consejo: usa un convertidor de binario a texto 😉)
+  </div>
+
+  <div class="clave-box">
+    <label for="clave2">Clave:</label>
+    <input type="text" id="clave2">
+    <button onclick="verificar()">Aceptar</button>
+  </div>
+
+  <script>
+    function verificar() {
+      const clave = document.getElementById('clave2').value.trim().toLowerCase();
+      if (clave === 'algo comienza') {
+        window.location.href = 'final.html';
+      } else {
+        alert("Clave incorrecta.");
+      }
+    }
+  </script>
+</body>
+</html>

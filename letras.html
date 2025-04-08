@@ -1,0 +1,56 @@
+<!-- letras.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuentra la clave</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #0ff;
+      font-family: monospace;
+      padding: 20px;
+    }
+
+    .texto-random {
+      white-space: pre-wrap;
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 1em;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #ff00cc;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Busca la palabra oculta 👁️</h2>
+  <div class="texto-random">
+    xKsjwPqOWelspookyZmnvdaRQspL... (hazlo más largo tú si quieres 😄)
+  </div>
+  <p>¿Cuál es la clave?</p>
+  <input type="text" id="clave1">
+  <button onclick="verificar()">Enviar</button>
+
+  <script>
+    function verificar() {
+      const clave = document.getElementById('clave1').value.trim().toLowerCase();
+      if (clave === 'spooky') {
+        window.location.href = 'binario.html';
+      } else {
+        alert("¡Esa no es la clave!");
+      }
+    }
+  </script>
+</body>
+</html>
